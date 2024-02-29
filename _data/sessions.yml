@@ -1,0 +1,163 @@
+day1:
+  - end: 9:15 AM
+    start: 9:00 AM
+    talks: []
+    title: "Opening Remarks"
+  - end: 10:15 AM
+    start: 9:15 AM
+    talks:
+      - authors:
+          - Rachid Guerraoui (EPFL)
+        bio: Rachid Guerraoui has been affiliated with Ecole des Mines of Paris, the Commissariat à l’Energie Atomique of Saclay, Hewlett Packard Laboratories and the Massachusetts Institute of Technology. He has worked in a variety of aspects of distributed computing, including distributed algorithms and distributed programming languages. He is most well known for his work on (e-)Transactions, epidemic information dissemination and indulgent algorithms.
+        title: "Keynote 1: The road to a Universal Internet Machine (Demystifying Blockchain Protocols)"
+    abstract: This talk will discuss what it would mean to build the abstraction of a widely distributed universal computer. In the process, the talk will revisit blockchain protocols through the lenses of first distributed computing principles and present simpler alternative protocols.
+  - end: 10:35 AM
+    start: 10:15 AM
+    talks:
+      - authors:
+          - Lăcrămioara Astefănoaei
+          - Pierre Chambart
+          - Antonella Del Pozzo
+          - Thibault Rieutord
+          - Sara Tucci
+          - Eugen Zalinescu
+        title: "Tenderbake - A Solution to Dynamic Repeated Consensus for Blockchains "
+        url: https://youtu.be/aoT39V-ySTc
+    title: "Research Paper"
+  - end: 10:45 AM
+    start: 10:35 AM
+    talks: []
+    title: "Break"
+  - end: 11:05 AM
+    start: 10:45 AM
+    talks:
+      - authors:
+          - Vicente Cholvi Juan
+          - Antonio Fernandez Anta
+          - Chryssis Georgiou
+          - Nicolas Nicolaou
+          - Michel Raynal
+          - Antonio Russo
+        title: "Byzantine-tolerant Distributed Grow-only Sets: Specification and Applications"
+        url: https://youtu.be/wzGWrhTZCD8
+    title: "Research Paper"
+
+  - end: 11:25 AM
+    start: 11:05 AM
+    talks:
+      - authors:
+          - Shreyas Bhat
+          - Ayten Kahya
+          - Rohit Kumar
+          - Bhaskar Krishnamachari
+        title: "DAISIM: A Computational Simulator for the MakerDAO Stablecoin"
+        url: https://youtu.be/3-tdwuG_2mU
+    title: "Research Paper"
+
+  - end: 11:40 AM
+    start: 11:25 AM
+    talks:
+      - authors:
+          - Lucas Massoni Sguerra
+          - Emilio Jesús Gallego Arias
+          - Pierre Jouvelot
+          - Gérard Memmi
+          - Fabien Coelho
+        title: "Blockchain Performance Benchmarking: a VCG Auction Smart Contract Use Case for Ethereum and Tezos"
+        url: https://youtu.be/9bFHQCizQzk
+    title: "Short Paper"
+
+  - end: 11:50 AM
+    start: 11:40 AM
+    talks:
+      - authors:
+          - Ayten Kahya
+          - Bhaskar Krishnamachari
+        title: "Eco-Trojan: A Blockchain-based Platform for Incentivizing Sustainability-Oriented Behaviors on a University Campus"
+        url: https://youtu.be/kgZFD9gLc2k
+    title: "Poster"
+
+  - end: 1:00 PM
+    start: 11:50 AM
+    talks: []
+    title: Lunch Break
+
+  - end: 14:00 PM
+    start: 13:00 PM
+    talks:
+      - authors:
+          - Elaine Shi (CMU, Cornell)
+        bio: Elaine Shi is an Associate Professor in CMU. Her research focuses on cryptography, algorithms, security, distributed systems, and foundations of blockchains. She is the recipient of a Packard Fellowship, an ONR YIP award, a Sloan Fellowship, the NSA Best Scientific Cybersecurity Award, and numerous other awards. She obtained her Ph.D. from CMU. Before joining CMU, she was an Assistant Professor at UMD and an Associated Professor at Cornell. She was also a Member of the Research Staff at PARC.
+        title: "Keynote 2: Game-Theoretically Secure Protocols Inspired by Blockchains"
+    abstract: Suppose that n parties want to run a protocol to jointly toss a coin. It is well-known that when half of the parties can be corrupt, strong fairness is impossible, i.e., the corrupt coalition can always misbehave and bias the outcome. Inspired by blockchain applications, we ask, is it possible to achieve a *game theoretic* notion of fairness under corrupt majority? I will talk about how to formulate game theoretic security, the overall possibility/impossibility of game-theoretically secure coin toss and leader election in the presence of majority coalitions, as well as the round complexity.
+
+  - end: 14:20 PM
+    start: 14:00 PM
+    talks:
+      - authors:
+          - Aritra Mitra
+          - Christian Gorenflo
+          - Lukasz Golab
+          - Srinivasan Keshav
+        title: "TimeFabric: Trusted Time for Hyperledger Fabric"
+        url: https://youtu.be/3H7adN8JISg
+    title: "Research Paper"
+
+  - end: 14:40 PM
+    start: 14:20 PM
+    talks:
+      - authors:
+          - Bhaskar Krishnamachari
+          - Qi Feng
+          - Eugenio Grippo
+        title: "Dynamic Curves for Decentralized Autonomous Cryptocurrency Exchanges"
+        url: https://youtu.be/Qcpju7kwmzg
+    title: "Research Paper"
+
+  - end: 15:00 PM
+    start: 14:40 PM
+    talks: []
+    title: Break
+
+  - end: 16:00 PM
+    start: 15:00 PM
+    talks:
+      - title: "15:00 - 15:05 : Intro to BAF"
+        authors:
+            - "Cameron Dennis, President and Founder of BAF"
+
+      - title: "15:05 - 15:15 : BAF Wallet"
+        authors:
+            - "Sebastien La Suca and Lev Stambler, Blockchain at CMU"
+
+      - title: "15:15 - 15:25 : Alchedemia, a Decentralized Learning Management System"
+        authors:
+            - "Piergiacomo Palmisani, Grants and Research at BAF"
+
+      - title: "15:25 - 15:30 : Ethereum Teacher Training Program"
+        authors:
+            - "Jacob Lindahl, Blockchain at University of Minnesota - Twin Cities"
+
+      - title: "15:30 - 15:40 : Token Delegation and DeFi Governance"
+        authors:
+            - "David Zheng, Blockchain at UCLA"
+            
+      - title: "15:35 - 15:45 : Solace, a Decentralized Insurance Protocol"
+        authors:
+            - "Nikita Buzov, Blockchain at UCSB"
+
+      - title: "15:45 - 15:55 : BoLT, Building on Local Trust"
+        authors:
+            - "Navo Emmanuel and Soham Kalva, Blockchain at CMU"
+
+      - title: "15:55 - 16:00 : BAF’s Next Steps"
+        authors:
+            - "Cameron Dennis, President and Founder of BAF"
+
+
+    title: Student session
+
+  - end: 16:10 PM
+    start: 16:00 PM
+    talks: []
+    title: Closing remarks

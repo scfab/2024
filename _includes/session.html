@@ -1,0 +1,124 @@
+<h3 class="session-date">{{include.date}}</h3>
+<table class="table table-responsive schedule">
+    <!-- <thead>
+      <tr><th class><h4></h4></th><th></th><th></th></tr>
+  </thead> -->
+    <tbody>
+        {% for session in site.data.sessions[include.key] %}
+        <tr>
+            <th class="time-column">
+                <div class="session-time">
+                    <div class="session-start">{{session.start}}</div>
+                    <div class="session-end">{{session.end}}</div>
+                </div>
+            </th>
+            <th class="session-info">
+                {% assign is_keynote = false %}
+                {% if session.title contains 'Keynote' %}
+                {% assign is_keynote = true %}
+                {% endif %}
+                {% assign showlinks = false %}
+                {% if include.showlinks == "true" %}
+                {% assign showlinks = true %}
+                {% endif %}
+                {% if session.url and (showlinks or is_keynote) %}
+                <a href="{{session.url}}">
+                    <h4 class="session-title">{{session.title}}</h4>
+                </a>
+                {% else %}
+                <a name="{{session.title}}">
+                    <h4 class="session-title">
+                        <font style="color:SteelBlue;">{{session.title}}</font>
+                    </h4>
+                </a>
+                {% endif %}
+                {% if session.chair %}
+                <a href="{{session.url}}">
+                    <h4 style="margin-top:4px;">
+                        <font style="color:SteelBlue;">Chair: {{session.chair}}</font>
+                    </h4>
+                </a>
+                {% endif %}
+                {% if session.location %}
+                <h4 style="margin-top:4px;">
+                    <font style="color:black;">Location: {{session.location}}</font>
+                </h4>
+                {% endif %}
+                {% if session.remarks%}
+                <h4 style="margin-top:4px;">
+                    <font style="color:black;">{{session.remarks}}</font>
+                </h4>
+                {% endif %}
+                <p class="course-meta" style="line-height:18px;">
+                    {% if session.urls.video %}
+                    (<a href="{{session.urls.video}}">
+                        <font style="color:SteelBlue;">video</font>
+                    </a>)
+                    {% endif %}
+                </p>
+                <div class="details">
+                    {% if session.talks %}
+                    <ul class="session-list">
+                        {% for talk in session.talks %}
+                        <li>
+                            {% if talk.url %}
+                            <a target="_blank" href="{{talk.url}}" style="display: block;">
+                                <h4 class="talk-title-link">{{ talk.title }} <b>[Link to Presentation]</b></h4> 
+                            </a>
+                            {% else %}
+                            <h4 class="talk-title">{{ talk.title }}</h4>
+                            {% endif %}
+                            {% assign authors = talk.authors | join: ', ' %}
+                            <p class="course-meta" style="line-height:18px;">{{authors}}
+                                {% if talk.bio %}
+                                <br><br>
+                                <b>Biography:</b>
+                                <span style="font-weight: 100;color: black;">{{ talk.bio }}</span>
+                                {% endif %}
+                                
+                                <br>
+                                <font style="color:SteelBlue;">{{ talk.duration }}</font>
+                                {% if talk.urls.video%}
+                                <br>(<a href="{{talk.urls.video}}">
+                                    <font style="color:SteelBlue;">video</font>
+                                </a>)
+                                {% endif %}
+                                {% if talk.urls.abs %}
+                                (<a href="{{talk.urls.abs}}">
+                                    <font style="color:SteelBlue;">abstract</font>
+                                </a>)
+                                {% endif %}
+                                {% if talk.urls.paper %}
+                                (<a href="{{talk.urls.paper}}">
+                                    <font style="color:SteelBlue;">paper</font>
+                                </a>)
+                                {% endif %}
+                            </p>
+                        </li>
+                        {% endfor %}
+                        {% if session.abstract %}
+                        <li><b>Abstract:</b>
+                            <p style="font-weight: 100;color: black;">{{ session.abstract }}</p>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    {% endif %}
+                    {% if session.panel %}
+                    <ul class="session-list">
+                        {% for panelist in session.panel %}
+                        <li>
+                            <a href="{{panelist.url}}">
+                                <h4 class="talk-title">{{ panelist.name }}</h4>
+                            </a>
+                            <p class="course-meta" style="line-height:18px;">{{ panelist.affiliation }}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </th>
+            <th></th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
